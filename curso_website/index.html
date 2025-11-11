@@ -4,109 +4,129 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UG</title>
-    <style>
-      h1 {
-        text-align: end;
-        text-align: center;
-        color: green;
-        text-transform: uppercase;
-      }
-    </style>
+    <link rel="preload" href="css/normalize.css" as="style" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link href="css/estilos.css" rel="preload" as="style" />
+    <link href="css/estilos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <h1>Desarrollo de Aplicaciones Web: Website</h1>
+      <h1 class="titulo">
+        Desarrollo de Aplicaciones Web: <span>Website</span>
+      </h1>
+      <!--Utlizar solo un elemento h1 por documento html-->
     </header>
-    <nav>
-      <a href="#">Inicio</a>
-      <a href="unidades.html">Unidades</a>
-      <a href="calificaciones.html">Calificaciones</a>
-      <a href="concursos.html">Concursos</a>
-    </nav>
-    <img src="images/webdesarrollo.png" />
-    <section>
-      <p>Joel Barba Salazar</p>
-      <img src="icons/mundo.svg" />
-      <p>Guayaquil, Ecuador</p>
-      <a href="#">Contactar</a
-      ><!--Simular un botón-->
+
+    <div class="nav-bg">
+      <nav class="navegacion-principal contenedor">
+        <a href="#">Inicio</a>
+        <a href="unidades.html">Unidades</a>
+        <a href="calificaciones.html">Calificaciones</a>
+        <a href="concursos.html">Concursos</a>
+      </nav>
+    </div>
+
+    <section class="hero">
+      <div class="contenido-hero">
+        <p>Joel Barba Salazar</p>
+
+        <p><img src="icons/mundo.svg" /> Guayaquil, Ecuador</p>
+        <a class="boton" href="#">Contactar</a
+        ><!--Simular un botón-->
+      </div>
     </section>
 
-    <main>
+    <main class="contenedor sombra">
       <h2>Tecnologías</h2>
       <!-- Si tiene un heading como primer hijo se recomienda hacer una section -->
+      <div class="lenguajes">
+        <section class="lenguaje">
+          <h3>HTML</h3>
+          <div class="iconos">
+            <img src="icons/html.svg" />
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta
+            turpis sed tortor egestas congue. Etiam eget ultricies sem.
+          </p>
+        </section>
+
+        <section class="lenguaje">
+          <h3>CSS</h3>
+          <div class="iconos">
+            <img src="icons/css.svg" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta
+            turpis sed tortor egestas congue. Etiam eget ultricies sem.
+          </p>
+        </section>
+
+        <section class="lenguaje">
+          <h3>Javascript</h3>
+          <div class="iconos">
+            <img src="icons/javascript.svg" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta
+            turpis sed tortor egestas congue. Etiam eget ultricies sem.
+          </p>
+        </section>
+
+        <section class="lenguaje">
+          <h3>Node.js</h3>
+          <div class="iconos">
+            <img src="icons/node.svg" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta
+            turpis sed tortor egestas congue. Etiam eget ultricies sem.
+          </p>
+        </section>
+      </div>
 
       <section>
-        <h3>HTML</h3>
-        <img src="icons/html.svg" />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta
-          turpis sed tortor egestas congue. Etiam eget ultricies sem.
-        </p>
-      </section>
+        <h2>Contacto</h2>
+        <form class="formulario">
+          <fieldset>
+            <legend>Contactanos</legend>
 
-      <section>
-        <h3>CSS</h3>
-        <img src="icons/css.svg" />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta
-          turpis sed tortor egestas congue. Etiam eget ultricies sem.
-        </p>
-      </section>
+            <div class="contenedor-campos">
+              <div class="campo">
+                <label>Nombre</label>
+                <input class="input-text" type="text" placeholder="Nombre" />
+              </div>
 
-      <section>
-        <h3>Javascript</h3>
-        <img src="icons/javascript.svg" />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta
-          turpis sed tortor egestas congue. Etiam eget ultricies sem.
-        </p>
-      </section>
+              <div class="campo">
+                <label>Correo</label>
+                <input class="input-text" type="email" />
+              </div>
 
-      <section>
-        <h3>Node.js</h3>
-        <img src="icons/node.svg" />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta
-          turpis sed tortor egestas congue. Etiam eget ultricies sem.
-        </p>
+              <div class="campo">
+                <label>Teléfono</label>
+                <input class="input-text" type="tel" />
+              </div>
+
+              <div class="campo">
+                <label>Mensaje</label>
+                <textarea class="input-text"></textarea>
+              </div>
+            </div>
+            <div class="enviar">
+              <input class="boton" type="submit" value="Enviar" />
+            </div>
+          </fieldset>
+        </form>
       </section>
     </main>
-
-    <section>
-      <h2>Contacto</h2>
-      <form>
-        <fieldset>
-          <legend>Contactanos</legend>
-
-          <div>
-            <label>Nombre</label>
-            <input type="text" placeholder="Nombre" />
-          </div>
-
-          <div>
-            <label>Correo</label>
-            <input type="email" />
-          </div>
-
-          <div>
-            <label>Teléfono</label>
-            <input type="tel" />
-          </div>
-
-          <div>
-            <label>Mensaje</label>
-            <textarea></textarea>
-          </div>
-
-          <div>
-            <input type="submit" value="Enviar" />
-          </div>
-        </fieldset>
-      </form>
-    </section>
-
-    <footer>
+    <footer class="footer">
       <p>Todos los derechos reservados. Joel Barba</p>
     </footer>
   </body>
